@@ -1,0 +1,18 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Dokumentacja AZ Biuro</title>
+<h1>Dokumentacja AZ Biuro</h1>
+<ul id="list"></ul>
+<script>
+const start=1, end=873;
+const pad=n=>String(n).padStart(3,'0');
+const ul=document.getElementById('list');
+for(let i=start;i<=end;i++){
+  const li=document.createElement('li');
+  const a=document.createElement('a');
+  a.href=`part_${pad(i)}/`;
+  a.textContent=`part_${pad(i)}`;
+  li.appendChild(a);
+  ul.appendChild(li);
+}
+</script>
